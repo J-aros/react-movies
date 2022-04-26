@@ -1,1 +1,1 @@
-# reacty-movies
+# react-movies
