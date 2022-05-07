@@ -1,7 +1,33 @@
+import React, { useContext } from "react";
+import { GlobalContext } from "../../store/Context/globalState";
+import MovieCard from "../MovieCard/MovieCard";
+
 const Watched = () => {
-    return (
-        <div></div>
-    );
-}
+  const { watched } = useContext(GlobalContext);
+  return (
+    <div className="movie-page">
+      <div className="container">
+        <div className="header">
+          <h1 className="heading">Películas Vistas</h1>
+          <span className="count-pill">
+            {watched.length} {watched.length === 1 ? "Película" : "Películas"}
+          </span>
+        </div>
+
+        {watched.length > 0 ? (
+          <div className="movie-grid">
+            {watched.map((movie) => (
+              <MovieCard movie={movie} key={movie.id} type="watched" />
+            ))}
+          </div>
+        ) : (
+          <h2 className="no-movies">
+            No hay películas vistas, agrega alguna!
+          </h2>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default Watched;

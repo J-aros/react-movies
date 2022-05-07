@@ -58,7 +58,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #DDDDDD;
+  background-color: #dddddd;
   opacity: 1;
   cursor: pointer;
 }
@@ -73,7 +73,7 @@ input:focus {
 }
 
 ::placeholder {
-  color: #A5A5A5;
+  color: #a5a5a5;
 }
 
 /* Header Styles */
